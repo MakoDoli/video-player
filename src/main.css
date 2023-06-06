@@ -1,0 +1,21 @@
+body {
+  background-color: palegoldenrod;
+  place-content: center;
+  display: grid;
+}
+.player {
+  position: relative;
+  width: 920px;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+.video {
+  position: absolute;
+  z-index: 1;
+}
+.buttons-container {
+  position: absolute;
+  left: 40%;
+  z-index: 2;
+  bottom: 10%;
+}
