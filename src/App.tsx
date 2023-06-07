@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import video360 from "../public/videos/360.mp4";
 import video720 from "../public/videos/720.mp4";
 import ReactPlayer from "react-player";
