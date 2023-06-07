@@ -1,21 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: palegoldenrod;
   place-content: center;
   display: grid;
 }
 .player {
-  position: relative;
   width: 920px;
   height: auto;
   aspect-ratio: 16/9;
+  position: relative;
 }
 .video {
+  margin-top: 5%;
+}
+.player-controls {
   position: absolute;
-  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  width: 100%;
+
+  top: 84%;
+}
+.player-controls:hover {
+  opacity: 1;
 }
 .buttons-container {
-  position: absolute;
   left: 40%;
   z-index: 2;
   bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  margin-left: 25%;
+}
+.progressbar {
+  color: white;
+  opacity: 0.8;
+  margin: 20px;
+  z-index: 2;
+  bottom: 5%;
+  width: 100%;
+}
+.bar {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  margin: 0 6px;
+  border-radius: 5px;
+  width: 85%;
+}
+.bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.control-button {
+  width: 38px;
+  margin-left: 2px;
+}
+.gear {
+  width: 18px;
+}
+.button,
+.play-button {
+  border-radius: 50%;
+  border: none;
+  height: 30px;
+  background-color: beige;
+  width: 30px;
+  display: grid;
+  place-content: center;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.play-button {
+  height: 40px;
+  width: 40px;
+}
+.volume {
+  display: flex;
+  gap: 10px;
+  margin-left: 30px;
+  border: 2px solid rgba(256, 256, 256, 0.5);
+  border-radius: 8px;
+  height: 35px;
+  padding: 0 5px;
+}
+.volume-slider {
+  height: 30px;
+  opacity: 0.8;
+}
+.volume-bar::-webkit-slider-thumb {
+  cursor: pointer;
 }
